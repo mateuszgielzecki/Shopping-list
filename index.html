@@ -32,22 +32,27 @@
         </ul>
       </section>
 
-      <section class="configuration-panel section">
+      <section class="configuration-panel section active">
+        <i class="fas fa-caret-down"></i>
         <div class="main-panel">
           <form>
             <label for="category">Add a category</label>
-            <input id="category" type="text" maxlength="20">
+            <input id="category" type="text" maxlength="20" />
 
             <label for="product">Add a product</label>
-            <input id="product" type="text" maxlength="20">
+            <input id="product" type="text" maxlength="20" />
 
-            <label for="clear-list">clear the shopping list</label>
-            <input type="checkbox" name="" id="clear-list">
+            <label for="clear-list" class="check-mark">
+              <input type="checkbox" id="clear-list" />Clear the shopping
+              list</label
+            >
 
-            <label for="reset-web">Reset the page</label>
-            <input type="checkbox" name="" id="reset-web">
+            <label for="reset-web" class="check-mark"
+              ><input type="checkbox" id="reset-web" />Reset the page</label
+            >
 
-            <button type="submit"><i class="fas fa-check-circle"></i></button>
+            <button type="submit"><i class="fas fa-check"></i></button>
+          </form>
         </div>
       </section>
     </div>

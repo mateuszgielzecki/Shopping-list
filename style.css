@@ -26,6 +26,7 @@ body {
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.66);
+  animation: downList 1s;
 }
 
 .shopping-list h3 {
@@ -56,24 +57,98 @@ ul {
   cursor: pointer;
 }
 
+@keyframes downList {
+  0% {
+    /* opacity: 0; */
+    transform: translateY(-100vh);
+  }
+
+  80% {
+    transform: translateY(7vh);
+  }
+
+  100% {
+    /* opacity: 1; */
+    transform: translateY(0);
+  }
+}
+
 /* Configuration panel */
 
-.configuration-panel {
+.configuration-panel.active {
   position: fixed;
-  top: 20%;
+  top: 25%;
   right: 0%;
-  bottom: 20%;
-  left: 70%;
+  bottom: 42%;
+  left: 85%;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .main-panel {
-  padding: 20px;
+  padding: 20px 50px 20px 20px;
 }
 
-label,
-input,
+select,
+input[type="text"] {
+  display: block;
+  padding: 7.5px 7.5px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+label {
+  display: block;
+  width: 100%;
+  margin-bottom: 7.5px;
+  text-transform: uppercase;
+}
+
+.check-mark {
+  text-transform: none;
+}
+
 button {
   display: block;
+  margin: 20px auto;
+  border: none;
+  transition: all 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  border-radius: 50%;
+}
+
+.fa-check {
+  font-size: 30px;
+  background-color: #fff;
+  color: #0095b6;
+  padding: 10px 10px;
+  outline: none;
+}
+
+.fa-caret-down {
+  position: absolute;
+  top: -35px;
+  left: 40%;
+  font-size: 70px;
+  transform: scale(1);
+  color: #0095b6;
+  transition: all 5.3;
+}
+
+.fa-caret-down:hover {
+  transform: scale(1) translateY(-2px);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
 }
