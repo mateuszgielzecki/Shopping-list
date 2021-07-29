@@ -17,7 +17,7 @@
 <body>
   <div class="wrapper">
     <section class="shopping-list section">
-      <h3><i class="fas fa-shopping-cart"></i> Your shopping list</h3>
+      <h3><i class="fas fa-shopping-cart"></i> Twoja lista zakupów</h3>
       <ul class="main-list list">
         <li>Higiena osobita:</li>
         <li>
@@ -34,28 +34,33 @@
     <section class="configuration-panel section">
 
       <form>
-        <label for="category">Add a category</label>
+        <label for="category">Dodaj kategorię</label>
         <input id="category" type="text" maxlength="40" />
 
-        <label for="product">Add a product</label>
+        <label for="product">Dodaj produkt</label>
         <input id="product" type="text" maxlength="20" />
 
         <label for="clear-list" class="check-mark">
-          <input type="checkbox" id="clear-list" />Clear the shopping
-          list</label>
+          <input type="checkbox" id="clear-list" />Wyczyść listę zakupów</label>
 
-        <label for="reset-web" class="check-mark"><input type="checkbox" id="reset-web" />Reset the page</label>
+        <label for="reset-web" class="check-mark"><input type="checkbox" id="reset-web" />Zresetuj stronę</label>
 
         <i class="fas fa-shopping-cart"></i>
 
-        <button type="submit"><i class="fas fa-check"></i></button>
+
+        <button class="submit-btn" type="submit"><i class="fas fa-check"></i></button>
       </form>
+
+      <div class="error-container">
+        <p class="error-text">Uzupełnij poprawnie pola</p>
+        <p class="error-font"><i class="fas fa-exclamation-circle"></i></p>
+      </div>
 
     </section>
 
 
     <section class="item-list section">
-      <ul class="clearfix">
+      <ul class="list-of-products">
         <li>
           <ul>
             <i class="fas fa-box"></i> Produkty sypkie:
@@ -67,7 +72,7 @@
             <li><input type="checkbox" name="" id="" />ryż</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fas fa-apple-alt"></i> Owoce:
             <li><input type="checkbox" name="" id="" />banany</li>
@@ -83,7 +88,7 @@
             <li><input type="checkbox" name="" id="" />czereśnie</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fas fa-carrot"></i> Warzywa:
             <li><input type="checkbox" name="" id="" />pomidory</li>
@@ -97,7 +102,7 @@
             <li><input type="checkbox" name="" id="" />rzodkiewka</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fas fa-bacon"></i> Mięso/Wędliny:
             <li><input type="checkbox" name="" id="" />kiełbasa</li>
@@ -111,7 +116,7 @@
             <li><input type="checkbox" name="" id="" />mięso wołowe</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fab fa-hotjar"></i> Sosy:
             <li><input type="checkbox" name="" id="" />chrzan</li>
@@ -121,7 +126,7 @@
             <li><input type="checkbox" name="" id="" />sos ostry</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fas fa-candy-cane"></i> Słodycze:
             <li><input type="checkbox" name="" id="" />nutella</li>
@@ -137,7 +142,7 @@
             <li><input type="checkbox" name="" id="" />orzeszki</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fas fa-birthday-cake"></i> Do ciast:
             <li><input type="checkbox" name="" id="" />bita śmietana</li>
@@ -152,7 +157,7 @@
             <li><input type="checkbox" name="" id="" />soda oczyszczona</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fas fa-coffee"></i> Kawa/herbata:
             <li><input type="checkbox" name="" id="" />kawa</li>
@@ -163,7 +168,7 @@
             <li><input type="checkbox" name="" id="" />herbata owocowa</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fas fa-ice-cream"></i> Mrożonki:
             <li><input type="checkbox" name="" id="" />lody</li>
@@ -173,7 +178,7 @@
             <li><input type="checkbox" name="" id="" />filet rybny</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fas fa-bread-slice"></i> Pieczywo:
             <li><input type="checkbox" name="" id="" />chleb</li>
@@ -182,7 +187,7 @@
             <li><input type="checkbox" name="" id="" />wafle ryżowe</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fas fa-cheese"></i> Nabiał:
             <li><input type="checkbox" name="" id="" />jogurty</li>
@@ -195,7 +200,7 @@
             <li><input type="checkbox" name="" id="" />kefir/maślanka</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fas fa-wine-bottle"></i> Napoje i alkohol:
             <li><input type="checkbox" name="" id="" />sok</li>
@@ -207,7 +212,7 @@
             <li><input type="checkbox" name="" id="" />piwo</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fas fa-oil-can"></i> Tłuszcze:
             <li><input type="checkbox" name="" id="" />olej</li>
@@ -216,7 +221,7 @@
             <li><input type="checkbox" name="" id="" />margaryna</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fas fa-mortar-pestle"></i> Przyprawy:
             <li><input type="checkbox" name="" id="" />sól</li>
@@ -240,7 +245,7 @@
             <li><input type="checkbox" name="" id="" />przprawa do grilla</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fas fa-drumstick-bite"></i> Dania gotowe:
             <li><input type="checkbox" name="" id="" />krokiety</li>
@@ -253,7 +258,7 @@
             <li><input type="checkbox" name="" id="" />zupy</li>
           </ul>
         </li>
-        <li class="clearfix">
+        <li>
           <ul>
             <i class="fas fa-hands-wash"></i> Higiena osobita:
             <li><input type="checkbox" name="" id="" />mydło</li>
