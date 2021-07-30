@@ -60,6 +60,10 @@ body {
   border-bottom: 0.1rem solid #000000;
 }
 
+.main-list li li {
+  cursor: pointer;
+}
+
 ul {
   list-style-type: none;
   font-weight: 700;
@@ -261,3 +265,7 @@ button:hover .fa-check {
 /* .error-text {
   margin-top: 4rem;
 } */
+.item.mark {
+  text-decoration: line-through;
+  color: rgb(86, 255, 86);
+}
