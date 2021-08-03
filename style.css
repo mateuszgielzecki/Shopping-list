@@ -104,6 +104,11 @@ ul {
   color: #444;
 }
 
+.item-list ul li ul li.active {
+  color: rgba(6, 240, 6, 0.883);
+  font-weight: bold;
+}
+
 /* Configuration panel */
 
 .configuration-panel {

@@ -3,17 +3,10 @@ const submitBtn = document.querySelector('.submit-btn');
 const listOfProducts = document.querySelector('.list-of-products');
 const errorContainer = document.querySelector('.error-container');
 
-
 const item = [...document.querySelectorAll('.item')];
 const deletedItem = [...document.querySelectorAll('.fa-times')];
 
-
-
-// productCategory.forEach(cat => {
-//     if (cat.childNodes.length === 1) cat.remove();
-//     // console.log(cat.childNodes[1]);
-
-// })
+const inputs = [...document.querySelectorAll('.list-of-products li ul li input')]
 
 item.forEach(item => {
     item.addEventListener('click', () => {
@@ -25,21 +18,12 @@ item.forEach(item => {
 
 deletedItem.forEach(item => {
     item.addEventListener('click', () => {
-        // item.remove()
         item.closest('li').remove();
 
         const productCategory = [...document.querySelectorAll('.product-category')];
 
-        productCategory.forEach(cat => {
-            if (cat.childElementCount === 0) cat.remove();
-            console.dir(cat.childElementCount);
-
-        })
-
     })
 })
-
-
 
 
 // Add new category
@@ -71,7 +55,12 @@ const clickBtn = function (e) {
 
 };
 
-
+inputs.forEach(input => {
+    input.addEventListener('click', () => {
+        if (input.checked === true) input.closest('li').classList.add('active');
+        if (input.checked === false) input.closest('li').classList.remove('active')
+    })
+})
 
 
 categoryField.addEventListener('keydown', () => errorContainer.classList.remove('active'))
