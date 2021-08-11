@@ -3,28 +3,51 @@ const submitBtn = document.querySelector('.submit-btn');
 const listOfProducts = document.querySelector('.list-of-products');
 const errorContainer = document.querySelector('.error-container');
 
-const item = [...document.querySelectorAll('.item')];
-const deletedItem = [...document.querySelectorAll('.fa-times')];
+const inputs = [...document.querySelectorAll('.list-of-products li ul li input')];
+const mainLi = [...document.querySelectorAll('.list-of-products li ul li')];
 
-const inputs = [...document.querySelectorAll('.list-of-products li ul li input')]
+let dataNumber = 1
+mainLi.forEach(li => li.setAttribute('data-number', `${dataNumber++}`))
 
-item.forEach(item => {
-    item.addEventListener('click', () => {
-        item.classList.toggle('mark')
+const mainList = document.querySelector('.main-list')
 
+inputs.forEach(input => {
 
-    })
+    input.addEventListener('click', () => {
+
+        if (input.checked === true) {
+            const inputClosest = input.closest('li')
+            inputClosest.classList.add('active');
+            console.dir(inputClosest.attributes[0].value);
+            const itemValue = input.closest('li').textContent;
+            mainList.insertAdjacentHTML('beforeend', `<li class='item' data-number="${inputClosest.attributes[0].value}"><i class="fas fa-times"></i>${itemValue}</li>`)
+            markAndDelete()
+        } else {
+            input.closest('li').classList.remove('active')
+        }
+    });
+
 })
 
-deletedItem.forEach(item => {
-    item.addEventListener('click', () => {
-        item.closest('li').remove();
+const markAndDelete = function () {
 
-        const productCategory = [...document.querySelectorAll('.product-category')];
+    let deletedItem = [...document.querySelectorAll('.fa-times')];
+    let item = [...document.querySelectorAll('.item')];
 
-    })
-})
+    item.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.add('mark');
+        });
+    });
 
+    deletedItem.forEach(item => {
+        item.addEventListener('click', () => {
+            item.closest('li').remove();
+
+            // const productCategory = [...document.querySelectorAll('.product-category')];
+        });
+    });
+};
 
 // Add new category
 let newLiCategory
@@ -50,19 +73,8 @@ const addNewCategory = function () {
 
 const clickBtn = function (e) {
     e.preventDefault();
-
     addNewCategory();
-
 };
-
-inputs.forEach(input => {
-    input.addEventListener('click', () => {
-        if (input.checked === true) input.closest('li').classList.add('active');
-        if (input.checked === false) input.closest('li').classList.remove('active')
-    })
-})
-
 
 categoryField.addEventListener('keydown', () => errorContainer.classList.remove('active'))
 submitBtn.addEventListener('click', clickBtn);
-
