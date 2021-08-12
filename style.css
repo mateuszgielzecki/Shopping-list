@@ -4,61 +4,166 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Lato", sans-serif;
-  font-weight: 400;
   line-height: 1.7;
-  padding: 30px;
+  padding: 3rem;
+  background-color: #dddddd9f;
+  overflow: hidden;
 }
 
 .wrapper {
-  max-height: 100vh;
   height: calc(100vh - 60px);
-  padding: 30px;
+  padding: 3rem;
   background-image: url(img/bgc1.png);
   background-size: cover;
   background-position: center;
 }
 
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.fas,
+.fab {
+  color: #0095b6;
+}
+
 /* Shopping list */
+.section {
+  position: fixed;
+  height: 85vh;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1.5rem 0.5rem rgb(0, 0, 0);
+  background-color: #fff;
+  background-image: linear-gradient(to right, #fff, #d6d6d657);
+}
 
 .shopping-list {
-  position: fixed;
-  width: 20%;
-  min-height: 85vh;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.66);
-  animation: downList 1s;
+  top: 7%;
+  left: 3%;
+  width: 30%;
+  animation: downList 1s ease-out;
 }
 
 .shopping-list h3 {
   text-align: center;
-  font-size: 24px;
-  font-weight: normal;
-  left: 2px;
-  margin-bottom: 5px;
-  border-bottom: 1px solid black;
+  font-size: 2.8rem;
+  margin-bottom: 0.7rem;
+  border-bottom: 0.1rem solid #000000;
+}
+
+.main-list li {
+  cursor: pointer;
 }
 
 ul {
   list-style-type: none;
-  font-weight: 700;
 }
 
-.shopping-list li ul li {
-  margin-left: 10px;
+.shopping-list li {
+  margin-left: 1.5rem;
   font-weight: 300;
   color: #555;
-  font-size: 16px;
+  font-size: 2rem;
 }
 
 .fa-times {
-  margin-right: 5px;
-  line-height: 16px;
-  color: #0095b6;
+  margin-right: 0.5rem;
   cursor: pointer;
+}
+
+/* item-list */
+.item-list {
+  top: 7%;
+  left: 35%;
+  width: 44%;
+  overflow-y: scroll;
+  animation: upList 1s;
+}
+
+.item-list ul li ul {
+  font-size: 2.8rem;
+  letter-spacing: 0.1rem;
+  border-bottom: 0.1rem dotted #00000040;
+  margin-left: 1rem;
+}
+
+.item-list ul li ul li {
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #444;
+}
+
+.item-list ul li ul li.active {
+  color: rgba(6, 240, 6, 0.883);
+  font-weight: bold;
+}
+
+/* Configuration panel */
+
+.configuration-panel {
+  position: absolute;
+  top: 7%;
+  left: 81%;
+  right: 3%;
+  animation: rightList 1s;
+  padding: 2rem 4rem;
+  font-size: 2rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  outline: none;
+  box-shadow: rgb(204, 219, 232) 0.3rem 0.3rem 0.6rem 0rem inset,
+    rgba(255, 255, 255, 0.5) -0.3rem -0.3rem 0.6rem 0.1rem inset;
+}
+
+input[type="checkbox"] {
+  margin-right: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+button {
+  position: absolute;
+  bottom: 12rem;
+  left: 45%;
+  padding: 2rem 2rem;
+  border: none;
+  background-color: #fff;
+  transition: all 0.2s;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+}
+
+button:hover {
+  background-color: #0095b6;
+  cursor: pointer;
+}
+
+button:hover .fa-check {
+  color: #fff;
+}
+
+.configuration-panel .fa-shopping-cart {
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  font-size: 25rem;
 }
 
 @keyframes downList {
@@ -75,107 +180,95 @@ ul {
   }
 }
 
-/* Configuration panel */
+@keyframes upList {
+  0% {
+    transform: translateY(100vh);
+  }
 
-.configuration-panel {
-  position: fixed;
-  top: 120px;
-  right: -500%;
-  background-color: #fff;
-  border-radius: 25px;
-  z-index: 1;
+  80% {
+    transform: translateY(-7vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
-.configuration-panel.active {
-  position: fixed;
-  top: 120px;
-  right: 0;
-  background-color: #fff;
-  border-radius: 25px;
+@keyframes rightList {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
-.main-panel {
-  padding: 20px 20px 20px 20px;
+.error-container {
+  visibility: hidden;
 }
 
-input[type="text"] {
-  padding: 7.5px 7.5px;
-  margin-bottom: 10px;
-  border: none;
-  outline: none;
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
-    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+.error-container.active {
+  visibility: visible;
+  border: #f00 0.1rem solid;
+  box-shadow: 1px 1px 10px red;
+  border-radius: 10px;
+  color: #f00;
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 5rem;
+  animation: shake 0.5s 0.3s;
 }
 
-input[type="checkbox"] {
-  margin-right: 10px;
+.fa-exclamation-circle {
+  color: #f00;
+  font-size: 4rem;
 }
 
-label {
-  display: block;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
 
-.check-mark {
-  text-transform: none;
-}
+  10% {
+    transform: translateX(0.5rem);
+  }
 
-button {
-  display: block;
-  margin: 20px auto 5px;
-  border: none;
-  transition: all 0.3s;
-}
+  20% {
+    transform: translateX(-0.5rem);
+  }
+  30% {
+    transform: translateX(0.5rem);
+  }
+  40% {
+    transform: translateX(-0.5rem);
+  }
+  50% {
+    transform: translateX(0.5rem);
+  }
 
-button:hover {
-  cursor: pointer;
-  transform: translateY(-2px);
-  border-radius: 50%;
-}
+  60% {
+    transform: translateX(-0.5rem);
+  }
+  70% {
+    transform: translateX(0.5rem);
+  }
+  80% {
+    transform: translateX(-0.5rem);
+  }
+  90% {
+    transform: translateX(0.5rem);
+  }
 
-.fa-check {
-  font-size: 30px;
-  background-color: #fff;
-  color: #0095b6;
+  100% {
+    transform: translateX(0);
+  }
 }
-
-.fa-bars {
-  position: fixed;
-  top: 60px;
-  right: 50px;
-  font-size: 50px;
-  color: #fff;
-  transition: all 0.1s;
-}
-
-.fa-bars:hover {
-  color: #013f4d;
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-.fa-bars:active {
-  transform: scale(0.9);
-}
-
-/* item-list */
-.item-list {
-  position: fixed;
-  top: 60px;
-  left: 25%;
-  background-color: rgba(255, 255, 255);
-  width: 68%;
-  min-height: 85vh;
-  padding: 10px 20px;
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.66);
-  border-radius: 5px;
-}
-
-.item-list ul {
-  font-size: 22px;
-}
-
-.item-list li li {
-  font-size: 16px;
+/* .error-text {
+  margin-top: 4rem;
+} */
+.item.mark {
+  text-decoration: line-through;
+  color: rgb(86, 255, 86);
 }

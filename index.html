@@ -1,227 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="fontawesome/fontawesome-free-5.15.3-web/css/all.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Shopping list | Predefined shopping list</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <section class="shopping-list section">
-        <h3>Your shopping list</h3>
-        <ul class="main-list list">
-          <li>Higiena osobita:</li>
-          <li>
-            Owoce:
-            <ul>
-              <li><i class="fas fa-times"></i>Jabłka</li>
-              <li><i class="fas fa-times"></i>Pomarańcze</li>
-            </ul>
-          </li>
-          <li>Warzywa:</li>
-        </ul>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <i class="fas fa-bars"></i>
-      <section class="configuration-panel section">
-        <div class="main-panel">
-          <form>
-            <label for="category">Add a category</label>
-            <input id="category" type="text" maxlength="20" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fontawesome/fontawesome-free-5.15.3-web/css/all.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Shopping list | Predefined shopping list</title>
+</head>
 
-            <label for="product">Add a product</label>
-            <input id="product" type="text" maxlength="20" />
+<body>
+  <div class="wrapper">
+    <section class="shopping-list section">
+      <h3><i class="fas fa-shopping-cart"></i> Twoja lista zakupów</h3>
 
-            <label for="clear-list" class="check-mark">
-              <input type="checkbox" id="clear-list" />Clear the shopping
-              list</label
-            >
+      <ul class="main-list list">
 
-            <label for="reset-web" class="check-mark"
-              ><input type="checkbox" id="reset-web" />Reset the page</label
-            >
-
-            <button type="submit"><i class="fas fa-check"></i></button>
-          </form>
-        </div>
-      </section>
-    </div>
-
-    <section class="item-list">
-      <ul>
-        <li>
-          <ul>
-            Higiena osobita:
-            <li><input type="checkbox" name="" id="" />mydło w płynie</li>
-            <li><input type="checkbox" name="" id="" />antyperspirant</li>
-            <li><input type="checkbox" name="" id="" />golarka</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Owoce:
-            <li><input type="checkbox" name="" id="" />jabłka</li>
-            <li><input type="checkbox" name="" id="" />pomarańcze</li>
-            <li><input type="checkbox" name="" id="" />banany</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Higiena osobita:
-            <li><input type="checkbox" name="" id="" />mydło w płynie</li>
-            <li><input type="checkbox" name="" id="" />antyperspirant</li>
-            <li><input type="checkbox" name="" id="" />golarka</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Owoce:
-            <li><input type="checkbox" name="" id="" />jabłka</li>
-            <li><input type="checkbox" name="" id="" />pomarańcze</li>
-            <li><input type="checkbox" name="" id="" />banany</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Higiena osobita:
-            <li><input type="checkbox" name="" id="" />mydło w płynie</li>
-            <li><input type="checkbox" name="" id="" />antyperspirant</li>
-            <li><input type="checkbox" name="" id="" />golarka</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Owoce:
-            <li><input type="checkbox" name="" id="" />jabłka</li>
-            <li><input type="checkbox" name="" id="" />pomarańcze</li>
-            <li><input type="checkbox" name="" id="" />banany</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Higiena osobita:
-            <li><input type="checkbox" name="" id="" />mydło w płynie</li>
-            <li><input type="checkbox" name="" id="" />antyperspirant</li>
-            <li><input type="checkbox" name="" id="" />golarka</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Owoce:
-            <li><input type="checkbox" name="" id="" />jabłka</li>
-            <li><input type="checkbox" name="" id="" />pomarańcze</li>
-            <li><input type="checkbox" name="" id="" />banany</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Higiena osobita:
-            <li><input type="checkbox" name="" id="" />mydło w płynie</li>
-            <li><input type="checkbox" name="" id="" />antyperspirant</li>
-            <li><input type="checkbox" name="" id="" />golarka</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Owoce:
-            <li><input type="checkbox" name="" id="" />jabłka</li>
-            <li><input type="checkbox" name="" id="" />pomarańcze</li>
-            <li><input type="checkbox" name="" id="" />banany</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Higiena osobita:
-            <li><input type="checkbox" name="" id="" />mydło w płynie</li>
-            <li><input type="checkbox" name="" id="" />antyperspirant</li>
-            <li><input type="checkbox" name="" id="" />golarka</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Owoce:
-            <li><input type="checkbox" name="" id="" />jabłka</li>
-            <li><input type="checkbox" name="" id="" />pomarańcze</li>
-            <li><input type="checkbox" name="" id="" />banany</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Higiena osobita:
-            <li><input type="checkbox" name="" id="" />mydło w płynie</li>
-            <li><input type="checkbox" name="" id="" />antyperspirant</li>
-            <li><input type="checkbox" name="" id="" />golarka</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Owoce:
-            <li><input type="checkbox" name="" id="" />jabłka</li>
-            <li><input type="checkbox" name="" id="" />pomarańcze</li>
-            <li><input type="checkbox" name="" id="" />banany</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Higiena osobita:
-            <li><input type="checkbox" name="" id="" />mydło w płynie</li>
-            <li><input type="checkbox" name="" id="" />antyperspirant</li>
-            <li><input type="checkbox" name="" id="" />golarka</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Owoce:
-            <li><input type="checkbox" name="" id="" />jabłka</li>
-            <li><input type="checkbox" name="" id="" />pomarańcze</li>
-            <li><input type="checkbox" name="" id="" />banany</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Higiena osobita:
-            <li><input type="checkbox" name="" id="" />mydło w płynie</li>
-            <li><input type="checkbox" name="" id="" />antyperspirant</li>
-            <li><input type="checkbox" name="" id="" />golarka</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Owoce:
-            <li><input type="checkbox" name="" id="" />jabłka</li>
-            <li><input type="checkbox" name="" id="" />pomarańcze</li>
-            <li><input type="checkbox" name="" id="" />banany</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Higiena osobita:
-            <li><input type="checkbox" name="" id="" />mydło w płynie</li>
-            <li><input type="checkbox" name="" id="" />antyperspirant</li>
-            <li><input type="checkbox" name="" id="" />golarka</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            Owoce:
-            <li><input type="checkbox" name="" id="" />jabłka</li>
-            <li><input type="checkbox" name="" id="" />pomarańcze</li>
-            <li><input type="checkbox" name="" id="" />banany</li>
-          </ul>
-        </li>
       </ul>
     </section>
 
-    <script src="script.js"></script>
-  </body>
+    <section class="configuration-panel section">
+
+      <form>
+        <label for="category">Dodaj kategorię</label>
+        <input id="category" type="text" maxlength="40" />
+
+        <label for="product">Dodaj produkt</label>
+        <input id="product" type="text" maxlength="20" />
+
+        <label for="clear-list" class="check-mark">
+          <input type="checkbox" id="clear-list" />Wyczyść listę zakupów</label>
+
+        <label for="reset-web" class="check-mark"><input type="checkbox" id="reset-web" />Zresetuj stronę</label>
+
+        <i class="fas fa-shopping-cart"></i>
+
+
+        <button class="submit-btn" type="submit"><i class="fas fa-check"></i></button>
+      </form>
+
+      <div class="error-container">
+        <p class="error-text">Uzupełnij poprawnie pola</p>
+        <p class="error-font"><i class="fas fa-exclamation-circle"></i></p>
+      </div>
+
+    </section>
+
+
+    <section class="item-list section">
+      <ul class="list-of-products">
+        <li>
+          <ul>
+            <i class="fas fa-box"></i> Produkty sypkie:
+            <li><input type="checkbox" name="" id="" />cukier</li>
+            <li><input type="checkbox" name="" id="" />kasza jęczmienna</li>
+            <li><input type="checkbox" name="" id="" />kasza gryczana</li>
+            <li><input type="checkbox" name="" id="" />makaron</li>
+            <li><input type="checkbox" name="" id="" />mąka</li>
+            <li><input type="checkbox" name="" id="" />ryż</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fas fa-apple-alt"></i> Owoce:
+            <li><input type="checkbox" name="" id="" />banany</li>
+            <li><input type="checkbox" name="" id="" />pomarańcze</li>
+            <li><input type="checkbox" name="" id="" />mandarynki</li>
+            <li><input type="checkbox" name="" id="" />cytryny</li>
+            <li><input type="checkbox" name="" id="" />jabłka</li>
+            <li><input type="checkbox" name="" id="" />kiwi</li>
+            <li><input type="checkbox" name="" id="" />winogrona</li>
+            <li><input type="checkbox" name="" id="" />gruszki</li>
+            <li><input type="checkbox" name="" id="" />arbuz</li>
+            <li><input type="checkbox" name="" id="" />truskawki</li>
+            <li><input type="checkbox" name="" id="" />czereśnie</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fas fa-carrot"></i> Warzywa:
+            <li><input type="checkbox" name="" id="" />pomidory</li>
+            <li><input type="checkbox" name="" id="" />cebula</li>
+            <li><input type="checkbox" name="" id="" />ogórki</li>
+            <li><input type="checkbox" name="" id="" />papryka</li>
+            <li><input type="checkbox" name="" id="" />sałata</li>
+            <li><input type="checkbox" name="" id="" />marchewka</li>
+            <li><input type="checkbox" name="" id="" />czosnek</li>
+            <li><input type="checkbox" name="" id="" />ziemniaki</li>
+            <li><input type="checkbox" name="" id="" />rzodkiewka</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fas fa-bacon"></i> Mięso/Wędliny:
+            <li><input type="checkbox" name="" id="" />kiełbasa</li>
+            <li><input type="checkbox" name="" id="" />wędlina</li>
+            <li><input type="checkbox" name="" id="" />salami</li>
+            <li><input type="checkbox" name="" id="" />kabanosy</li>
+            <li><input type="checkbox" name="" id="" />parówki</li>
+            <li><input type="checkbox" name="" id="" />filet z kurczaka</li>
+            <li><input type="checkbox" name="" id="" />mięso mielone</li>
+            <li><input type="checkbox" name="" id="" />mięso wieprzowe</li>
+            <li><input type="checkbox" name="" id="" />mięso wołowe</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fab fa-hotjar"></i> Sosy:
+            <li><input type="checkbox" name="" id="" />chrzan</li>
+            <li><input type="checkbox" name="" id="" />majonez</li>
+            <li><input type="checkbox" name="" id="" />musztarda</li>
+            <li><input type="checkbox" name="" id="" />ketchup</li>
+            <li><input type="checkbox" name="" id="" />sos ostry</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fas fa-candy-cane"></i> Słodycze:
+            <li><input type="checkbox" name="" id="" />nutella</li>
+            <li><input type="checkbox" name="" id="" />czekolada</li>
+            <li><input type="checkbox" name="" id="" />batony</li>
+            <li><input type="checkbox" name="" id="" />mleczne kanapki</li>
+            <li><input type="checkbox" name="" id="" />ciastka</li>
+            <li><input type="checkbox" name="" id="" />cukierki</li>
+            <li><input type="checkbox" name="" id="" />żelki</li>
+            <li><input type="checkbox" name="" id="" />popcorn</li>
+            <li><input type="checkbox" name="" id="" />chipsy</li>
+            <li><input type="checkbox" name="" id="" />paluszki</li>
+            <li><input type="checkbox" name="" id="" />orzeszki</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fas fa-birthday-cake"></i> Do ciast:
+            <li><input type="checkbox" name="" id="" />bita śmietana</li>
+            <li><input type="checkbox" name="" id="" />budyń</li>
+            <li><input type="checkbox" name="" id="" />kisiel</li>
+            <li><input type="checkbox" name="" id="" />galaretka</li>
+            <li><input type="checkbox" name="" id="" />drodże</li>
+            <li><input type="checkbox" name="" id="" />proszek do pieczenia</li>
+            <li><input type="checkbox" name="" id="" />cukier wanilinowy</li>
+            <li><input type="checkbox" name="" id="" />owoce suszone</li>
+            <li><input type="checkbox" name="" id="" />wiórki kokosowe</li>
+            <li><input type="checkbox" name="" id="" />soda oczyszczona</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fas fa-coffee"></i> Kawa/herbata:
+            <li><input type="checkbox" name="" id="" />kawa</li>
+            <li><input type="checkbox" name="" id="" />kawa rozpuszczalna</li>
+            <li><input type="checkbox" name="" id="" />kakao</li>
+            <li><input type="checkbox" name="" id="" />herbata czarna</li>
+            <li><input type="checkbox" name="" id="" />herbata zielona</li>
+            <li><input type="checkbox" name="" id="" />herbata owocowa</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fas fa-ice-cream"></i> Mrożonki:
+            <li><input type="checkbox" name="" id="" />lody</li>
+            <li><input type="checkbox" name="" id="" />mrożone warzywa</li>
+            <li><input type="checkbox" name="" id="" />mrożone owoce</li>
+            <li><input type="checkbox" name="" id="" />krewetki</li>
+            <li><input type="checkbox" name="" id="" />filet rybny</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fas fa-bread-slice"></i> Pieczywo:
+            <li><input type="checkbox" name="" id="" />chleb</li>
+            <li><input type="checkbox" name="" id="" />bułki</li>
+            <li><input type="checkbox" name="" id="" />chleb tostowy</li>
+            <li><input type="checkbox" name="" id="" />wafle ryżowe</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fas fa-cheese"></i> Nabiał:
+            <li><input type="checkbox" name="" id="" />jogurty</li>
+            <li><input type="checkbox" name="" id="" />jogurt naturalny</li>
+            <li><input type="checkbox" name="" id="" />serki</li>
+            <li><input type="checkbox" name="" id="" />masło</li>
+            <li><input type="checkbox" name="" id="" />mleko</li>
+            <li><input type="checkbox" name="" id="" />śmietana</li>
+            <li><input type="checkbox" name="" id="" />ser żółty</li>
+            <li><input type="checkbox" name="" id="" />kefir/maślanka</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fas fa-wine-bottle"></i> Napoje i alkohol:
+            <li><input type="checkbox" name="" id="" />sok</li>
+            <li><input type="checkbox" name="" id="" />sok pomarańczowy</li>
+            <li><input type="checkbox" name="" id="" />sok jabłkowy</li>
+            <li><input type="checkbox" name="" id="" />napoje gazowane</li>
+            <li><input type="checkbox" name="" id="" />pepsi/cola</li>
+            <li><input type="checkbox" name="" id="" />woda</li>
+            <li><input type="checkbox" name="" id="" />piwo</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fas fa-oil-can"></i> Tłuszcze:
+            <li><input type="checkbox" name="" id="" />olej</li>
+            <li><input type="checkbox" name="" id="" />oliwa z oliwek</li>
+            <li><input type="checkbox" name="" id="" />olej kokosowy</li>
+            <li><input type="checkbox" name="" id="" />margaryna</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fas fa-mortar-pestle"></i> Przyprawy:
+            <li><input type="checkbox" name="" id="" />sól</li>
+            <li><input type="checkbox" name="" id="" />pieprz</li>
+            <li><input type="checkbox" name="" id="" />bazylia</li>
+            <li><input type="checkbox" name="" id="" />oregano</li>
+            <li><input type="checkbox" name="" id="" />chili</li>
+            <li><input type="checkbox" name="" id="" />curry</li>
+            <li><input type="checkbox" name="" id="" />goździki</li>
+            <li><input type="checkbox" name="" id="" />vegeta</li>
+            <li><input type="checkbox" name="" id="" />cynamon</li>
+            <li><input type="checkbox" name="" id="" />słodka papryka</li>
+            <li><input type="checkbox" name="" id="" />ostra papryka</li>
+            <li><input type="checkbox" name="" id="" />czosnek granulowany</li>
+            <li><input type="checkbox" name="" id="" />liść laurowy</li>
+            <li><input type="checkbox" name="" id="" />ziele angielskie</li>
+            <li><input type="checkbox" name="" id="" />majeranek</li>
+            <li><input type="checkbox" name="" id="" />kolendra</li>
+            <li><input type="checkbox" name="" id="" />przyprawa do kurczaka</li>
+            <li><input type="checkbox" name="" id="" />przprawa do gyrosa</li>
+            <li><input type="checkbox" name="" id="" />przprawa do grilla</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fas fa-drumstick-bite"></i> Dania gotowe:
+            <li><input type="checkbox" name="" id="" />krokiety</li>
+            <li><input type="checkbox" name="" id="" />pierogi</li>
+            <li><input type="checkbox" name="" id="" />kotlet</li>
+            <li><input type="checkbox" name="" id="" />naleśniki</li>
+            <li><input type="checkbox" name="" id="" />racuchy</li>
+            <li><input type="checkbox" name="" id="" />spaghetti</li>
+            <li><input type="checkbox" name="" id="" />pizza mrożona</li>
+            <li><input type="checkbox" name="" id="" />zupy</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <i class="fas fa-hands-wash"></i> Higiena osobita:
+            <li><input type="checkbox" name="" id="" />mydło</li>
+            <li><input type="checkbox" name="" id="" />mydło w płynie</li>
+            <li><input type="checkbox" name="" id="" />szampon</li>
+            <li><input type="checkbox" name="" id="" />plyn do kąpieli</li>
+            <li><input type="checkbox" name="" id="" />antyperspirant</li>
+            <li><input type="checkbox" name="" id="" />pasta do zębów</li>
+            <li><input type="checkbox" name="" id="" />pasta do włosów</li>
+            <li><input type="checkbox" name="" id="" />golarki</li>
+            <li><input type="checkbox" name="" id="" />krem do twarzy</li>
+            <li><input type="checkbox" name="" id="" />środek do czyszczenia uszu</li>
+            <li><input type="checkbox" name="" id="" />chusteczki higieniczne</li>
+          </ul>
+        </li>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
